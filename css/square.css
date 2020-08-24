@@ -1,0 +1,98 @@
+.square{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+}
+
+.s-rotate{
+    visibility: hidden;
+    position: absolute;
+    animation-name: squarerotate;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 4.5s; /*----------------------------------*/
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+    width: 20vh;
+    height: 20vh;
+}
+
+@keyframes squarerotate{
+    0%{
+        top: 100vh;
+        right: 100vw;
+        transform-origin: 600% 0%;
+        transform: rotate(0deg);
+    }
+    100%{
+        top: 50vh;
+        right: 25vw;
+        transform-origin: 100% 0%;
+        transform: rotate(360deg);
+    }
+}
+
+.s-scale{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    animation: starrotate 4s linear 0s infinite normal;
+}
+
+@keyframes starrotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(1080deg);
+    }
+}
+
+.s-scale div:nth-child(1),
+.s-scale div:nth-child(2),
+.s-scale div:nth-child(3){
+    visibility: visible;
+    display: inline-block;
+    position: absolute;
+    animation: starscale 0.3s ease-in-out 1 both;
+    font-size: 800%;
+    backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+}
+
+@keyframes starscale{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(40);
+    }
+}
+
+.s-scale div:nth-child(1){
+    z-index: 4;
+    color: #1d4763;
+    animation-delay: 5.5s;
+}
+.s-scale div:nth-child(2){
+    z-index: 5;
+    color: #5fc1c7;
+    animation-delay: 5.6s;
+}
+.s-scale div:nth-child(3){
+    z-index: 6;
+    color: #fcf7b0;
+    animation-delay: 5.7s;
+}
+
+.back.active{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fcf7b0;
+}

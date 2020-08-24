@@ -1,0 +1,44 @@
+@import url("menubar.css");
+@import url("curtain.css");
+@import url("hello.css");
+@import url("square.css");
+@import url("menubar.css");
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  backface-visibility: hidden;/* animation時のにじみ防止 */
+	-webkit-backface-visibility: hidden;/* animation時のにじみ防止 */
+}
+
+body{
+  font-family: 'YuGothic','Yu Gothic','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', 'Meiryo','ＭＳ ゴシック',sans-serif;
+  min-height: 100vh;
+}
+
+
+/*メニューバーが押されたとき、これを起動させたい*/
+/*
+.box{
+  background: blueviolet;
+  width: 25vw;
+  position: relative;
+  animation-name: myanimation;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes myanimation{
+  0%{
+    background-color: blueviolet;
+    height: 0vh;
+  }
+  100%{
+    background-color: blue;
+    height: 100vh;
+  }
+}
+*/
